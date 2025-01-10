@@ -20,7 +20,9 @@ def questao1():
     while k < indice:
         k = k + 1
         soma = soma + k
-    print(soma)
+    print("Soma", soma)
+
+questao1()
 
 def analisar_faturamento(json_file):
     with open(json_file, 'r') as file:
@@ -35,8 +37,6 @@ def analisar_faturamento(json_file):
     maior_valor = max(faturamentos)
     media_mensal = sum(faturamentos) / len(faturamentos)
     
-    print(media_mensal)
-
     dias_acima_media = sum(1 for dia in faturamentos if dia > media_mensal)
 
     return{
